@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="description" content="PQG">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulario de registro - Mi web</title>
+</head>
+
+<style>
+    body{
+        background-image: linear-gradient(135deg,#8a749a,#84639b,#8458a4,#7533a4,#631c96,#570491,#320552);
+        background-size: 500%;
+        animation: fanimado 15s infinite;
+    }
+
+    @keyframes fanimado{
+      0%{
+        background-position: 0% 50%;
+      }
+      50%{
+        background-position: 100% 50%;
+      }
+      100%{
+        background-position: 0% 50%;
+      }
+    }
+
+    .form{
+        width:440px;
+        height:1050px;
+        background:#e6e6e6;
+        border-radius:8px;
+        box-shadow:0 0 40px -10px #000;
+        margin:calc(50vh - 220px) auto;
+        padding:20px 30px;
+        max-width:calc(100vw - 40px);
+        box-sizing:border-box;
+        font-family:'Montserrat',sans-serif;
+        position:relative;
+    }
+
+    h2{
+        margin:10px 0;
+        padding-bottom:10px;
+        width:180px;
+        color:#141494;
+        border-bottom:3px solid #78788c;
+    }
+
+    input{
+        width:100%;
+        padding:10px;
+        box-sizing:border-box;
+        background:none;
+        outline:none;
+        resize:none;
+        border:0;
+        font-family:'Montserrat',sans-serif;
+        transition:all .3s;
+        border-bottom:2px solid #bebed2;
+    }
+
+    input:focus{
+        border-bottom:2px solid #78788c;
+    }
+
+    p:before{
+        content:attr(type);
+        display:block;
+        margin:28px 0 0;
+        font-size:14px;
+        color:#5a5a5a;
+    }
+
+    button{
+        float:right;
+        padding:8px 12px;
+        margin:8px 0 0;
+        font-family:'Montserrat',sans-serif;
+        border:2px solid #000000;
+        background:#ffffff;
+        color:#030303;
+        cursor:pointer;
+        transition:all .3s;
+        border-radius: 10px;
+    }
+
+    button:hover{
+        background:#ea899a;
+        color:#000000;
+    }
+
+    div{
+        content:'Hi';
+        position:absolute;
+        bottom:-15px;right:-20px;
+        background:#50505a;
+        color:#fff;
+        width:320px;
+        padding:16px 4px 16px 0;
+        border-radius:6px;
+        font-size:13px;
+        box-shadow:10px 10px 40px -14px #000;
+    }
+
+    [type=":checkedbox"]{display: none;}
+    
+    span{
+        margin:0 5px 0 15px;
+        text-align: center;
+    }
+
+    </style>
+
+<body>
+    <form class="form" method="get" action="Procesos.php">
+        <h2>Informacion Personal!!</h2>
+
+        <p type="Nombre:"><input type="text" placeholder="Escribe tu nombre aqu&iacute;..." min="50" name="Nom"></input></p>
+        <p type="Apellidos:"><input type="text" placeholder="Escribe tu apellido aqu&iacute;..." min="50" name="Ape"></input></p>
+        <p type="Email:"><input placeholder="Email para que te contactemos.." min="50" name="Correo"></input></p>
+        <p type="Mensaje:"><input placeholder="Que deseas saber.." min="50" name="Men"></input></p>
+
+        <center><p style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 17px;" >-SEXO-</p></center>
+        <b><p type="Masculino" id="SexMas"><input type="radio"></input></p></b>
+        <b><p type="Femenino" id="SexFem"><input type="radio"></input></p></b>
+
+        <center>
+            <p type="Deseo recibir informaci&oacute;n sobre novedades y ofertas."><input type="CHECKBOX" name="tipo" value="1"></p>
+            <p type="Declaro haber le&iacute;do y aceptar las condiciones generales del programa y la normava sobre proteccion de datos."></p><input type="CHECKBOX" name="tipo" value="2"></p>
+            <p type="Deseo recibir informaci&oacute;n sobre novedades y ofertas."></p><input type="CHECKBOX" name="tipo" checked></p>    
+
+            <b><p type="Poblacion":><select name="Poblacion"></b>
+            <option>Orizaba
+            <option>C&oacute;rdoba
+            <option>Xalapa
+            <option>Veracruz
+            </select>
+            </p>
+        </center>
+
+        <button>Enviar</button>
+        <div>
+          <span >Glenn Mauricio Bello Chacon - No. 20011179</span> 
+        </div>
+      </form>
+</body>
+</html>
